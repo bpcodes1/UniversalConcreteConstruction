@@ -2,104 +2,450 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;700&family=Barlow:wght@300;400;600;700&display=swap');
+
+/* =============================================
+   DESIGN SYSTEM — Salvador's Concrete LLC
+   All colors in HSL
+   ============================================= */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand Colors */
+    --blue: 226 82% 37%;           /* #1135A7 */
+    --blue-dark: 222 82% 24%;      /* #0A2570 */
+    --blue-light: 226 75% 44%;     /* #1a45c7 */
+    --yellow: 51 100% 50%;         /* #FFD700 */
+    --black: 0 0% 4%;              /* #0a0a0a */
+    --white: 0 0% 100%;            /* #ffffff */
+    --gray: 0 0% 49%;              /* #7e7e7e */
+    --gray-light: 220 11% 96%;     /* #f4f5f7 */
+    --gray-mid: 220 8% 91%;        /* #e8eaee */
+    --text: 240 27% 14%;           /* #1a1a2e */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Shadcn tokens mapped to brand */
+    --background: var(--white);
+    --foreground: var(--text);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: var(--white);
+    --card-foreground: var(--text);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: var(--white);
+    --popover-foreground: var(--text);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--blue);
+    --primary-foreground: var(--white);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: var(--gray-light);
+    --secondary-foreground: var(--text);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: var(--gray-light);
+    --muted-foreground: var(--gray);
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: var(--yellow);
+    --accent-foreground: var(--black);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: var(--white);
 
-    --radius: 0.5rem;
+    --border: var(--gray-mid);
+    --input: var(--gray-mid);
+    --ring: var(--blue);
+
+    --radius: 4px;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
+/* =============================================
+   GLOBAL RESETS & BASE STYLES
+   ============================================= */
+
 @layer base {
-  * {
-    @apply border-border;
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-background text-foreground;
+    font-family: 'Barlow', sans-serif;
+    color: hsl(var(--text));
+    background: hsl(var(--white));
+    overflow-x: hidden;
+    @apply border-border;
   }
+
+  * {
+    @apply border-border;
+  }
+}
+
+/* =============================================
+   TYPOGRAPHY UTILITIES
+   ============================================= */
+
+@layer utilities {
+  .font-bebas { font-family: 'Bebas Neue', sans-serif; }
+  .font-barlow { font-family: 'Barlow', sans-serif; }
+  .font-barlow-condensed { font-family: 'Barlow Condensed', sans-serif; }
+}
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes accordion-down {
+  from { height: 0; opacity: 0; }
+  to { height: var(--radix-accordion-content-height); opacity: 1; }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+
+/* =============================================
+   SCROLL REVEAL
+   ============================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay {
+  transition-delay: 0.2s;
+}
+
+/* =============================================
+   HERO ELEMENTS
+   ============================================= */
+
+.hero-fade-1 {
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+.hero-fade-2 {
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+.hero-fade-3 {
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+.hero-fade-4 {
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+}
+.hero-fade-5 {
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+/* =============================================
+   SECTION LABEL STYLE
+   ============================================= */
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: hsl(var(--yellow));
+  margin-bottom: 16px;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: hsl(var(--yellow));
+  flex-shrink: 0;
+}
+
+.section-label-center {
+  justify-content: center;
+}
+
+.section-label-dark {
+  color: hsl(var(--blue));
+}
+
+.section-label-dark::before {
+  background: hsl(var(--blue));
+}
+
+/* =============================================
+   CONTAINER
+   ============================================= */
+
+.sc-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 900px) {
+  .sc-container {
+    padding: 0 24px;
+  }
+}
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: hsl(var(--yellow));
+  color: hsl(var(--black));
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 18px 36px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(255, 215, 0, 0.3);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.45);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: hsl(var(--white));
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 18px 36px;
+  border-radius: 3px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-ghost:hover {
+  border-color: hsl(var(--white));
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: hsl(var(--white));
+  color: hsl(var(--blue));
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 20px 44px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* =============================================
+   SERVICE CARDS
+   ============================================= */
+
+.service-card {
+  background: white;
+  border-radius: 6px;
+  padding: 36px 32px;
+  border: 1px solid hsl(var(--gray-mid));
+  border-top: 4px solid hsl(var(--blue));
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+  cursor: default;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: hsl(var(--yellow));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(17, 53, 167, 0.12);
+}
+
+.service-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* =============================================
+   AUTHORITY CARDS
+   ============================================= */
+
+.authority-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid hsl(var(--yellow));
+  padding: 28px 32px;
+  border-radius: 4px;
+}
+
+/* =============================================
+   DIFFERENTIATOR ITEMS
+   ============================================= */
+
+.diff-item {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: hsl(var(--gray-light));
+  border-radius: 4px;
+  border-left: 3px solid hsl(var(--blue));
+  transition: background 0.25s, box-shadow 0.25s;
+}
+
+.diff-item:hover {
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* =============================================
+   PROCESS CIRCLES
+   ============================================= */
+
+.process-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: hsl(var(--blue));
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid hsl(var(--gray-light));
+  margin: 0 auto 24px;
+  position: relative;
+  z-index: 1;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  cursor: default;
+}
+
+.process-circle:hover {
+  background: hsl(var(--yellow));
+  color: hsl(var(--black));
+  transform: scale(1.1);
+}
+
+/* =============================================
+   FAQ ACCORDION
+   ============================================= */
+
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: hsl(var(--yellow));
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.faq-icon.open {
+  background: hsl(var(--yellow));
+  color: hsl(var(--black));
+  border-color: hsl(var(--yellow));
+  transform: rotate(45deg);
+}
+
+/* =============================================
+   OBJECTION CARDS
+   ============================================= */
+
+.objection-card {
+  padding: 32px 36px;
+  border-radius: 6px;
+  border: 1px solid hsl(var(--gray-mid));
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.objection-card:hover {
+  border-color: hsl(var(--blue));
+  box-shadow: 0 6px 24px rgba(17, 53, 167, 0.08);
 }
