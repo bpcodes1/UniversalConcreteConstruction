@@ -125,7 +125,7 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div
-          className="hero-fade-4"
+          className="hero-fade-4 hero-cta-row"
           style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}
         >
           <a href="tel:5039322466" className="btn-primary">
@@ -195,7 +195,7 @@ const HeroSection = () => {
       <style>{`
         @media (max-width: 900px) {
           .hero-content {
-            padding: 120px 24px 120px !important;
+            padding: 120px 24px 180px !important;
           }
           .trust-bar {
             padding: 16px 24px !important;
@@ -203,8 +203,18 @@ const HeroSection = () => {
           }
         }
         @media (max-width: 560px) {
+          .hero-content {
+            padding: 120px 24px 240px !important;
+          }
           .hero-content h1 {
             font-size: 54px !important;
+          }
+          .hero-cta-row {
+            flex-direction: column !important;
+          }
+          .hero-cta-row a {
+            width: 100% !important;
+            justify-content: center !important;
           }
         }
       `}</style>
