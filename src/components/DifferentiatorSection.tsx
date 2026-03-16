@@ -55,7 +55,7 @@ const DifferentiatorSection = () => {
         <div className="diff-grid">
           {/* Left Column */}
           <div ref={leftRef} className="reveal">
-            <div className="section-label section-label-dark">Why Salvador's</div>
+            <div className="section-label section-label-dark">Why Aaron Allen Hulst</div>
             <h2
               style={{
                 fontFamily: "'Bebas Neue', sans-serif",
