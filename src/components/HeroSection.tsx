@@ -1,3 +1,5 @@
+import heroBg from "../assets/hero-concrete.jpg";
+
 const HeroSection = () => {
   const trustItems = [
     "15+ Years in Oregon",
