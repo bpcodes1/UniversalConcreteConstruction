@@ -43,8 +43,8 @@ const FooterSection = () => {
                 marginBottom: "16px",
               }}
             >
-              SALVADOR'S{" "}
-              <span style={{ color: "hsl(51,100%,50%)" }}>CONCRETE</span> LLC
+              AARON ALLEN{" "}
+              <span style={{ color: "hsl(51,100%,50%)" }}>HULST</span>
             </div>
             <p
               style={{
