@@ -1,7 +1,7 @@
 const FooterSection = () => {
   const navLinks = [
     { label: "Services", href: "#services" },
-    { label: "Why Salvador's", href: "#differentiator" },
+    { label: "Why Aaron Allen Hulst", href: "#differentiator" },
     { label: "Our Process", href: "#process" },
     { label: "Common Questions", href: "#objections" },
     { label: "Full FAQ", href: "#faq" },
