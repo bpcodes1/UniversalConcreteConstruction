@@ -158,7 +158,7 @@ const FooterSection = () => {
               Contact
             </h4>
             <a
-              href="tel:5039322466"
+              href="tel:5039148519"
               style={{
                 fontFamily: "'Bebas Neue', sans-serif",
                 fontSize: "32px",
