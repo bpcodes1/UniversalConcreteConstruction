@@ -94,7 +94,7 @@ const AuthoritySection = () => {
               }}
             >
               Most contractors pick up a mixer and call themselves professionals.
-              Salvador's Concrete LLC has spent 15 years earning the right to
+              Aaron Allen Hulst has spent 15 years earning the right to
               say it.
             </p>
             <p

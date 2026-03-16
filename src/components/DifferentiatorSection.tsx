@@ -92,7 +92,7 @@ const DifferentiatorSection = () => {
                 marginBottom: "32px",
               }}
             >
-              Salvador's Concrete LLC is not competing on price. We compete on
+              Aaron Allen Hulst is not competing on price. We compete on
               outcome. Concrete repairs and replacements cost two to three times
               more than a quality original installation.
             </p>

@@ -236,7 +236,7 @@ const FooterSection = () => {
               color: "rgba(255,255,255,0.3)",
             }}
           >
-            © 2025 Salvador's Concrete LLC. All Rights Reserved. | Licensed
+            © 2025 Aaron Allen Hulst. All Rights Reserved. | Licensed
             Concrete Contractor in Oregon | CCB #222812
           </p>
           <p
