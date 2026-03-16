@@ -55,9 +55,9 @@ const FooterSection = () => {
                 marginBottom: "20px",
               }}
             >
-              Oregon's trusted concrete contractor for 15+ years. Licensed,
-              bonded, and insured on every project across the state — from
-              residential driveways in Salem to commercial slabs in Portland.
+            Oregon's trusted concrete contractor for 15+ years. Licensed,
+            bonded, and insured on every project across the state — from
+            residential driveways in Salem to commercial slabs in Portland.
             </p>
             <div
               style={{
