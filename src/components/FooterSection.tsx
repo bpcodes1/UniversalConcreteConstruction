@@ -174,7 +174,7 @@ const FooterSection = () => {
                 (e.currentTarget.style.color = "hsl(51,100%,50%)")
               }
             >
-              (503) 932-2466
+              (503) 914-8519
             </a>
             <p
               style={{
