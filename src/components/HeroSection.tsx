@@ -18,13 +18,24 @@ const HeroSection = () => {
         overflow: "hidden",
       }}
     >
-      {/* Layer 1 — Gradient + noise */}
+      {/* Layer 0 — Background image */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+
+      {/* Layer 1 — Gradient + noise overlay */}
       <div
         className="hero-bg"
         style={{
           position: "absolute",
           inset: 0,
-          background: `linear-gradient(135deg, rgba(17,53,167,0.92) 0%, rgba(10,10,20,0.88) 60%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E")`,
+          background: `linear-gradient(135deg, rgba(17,53,167,0.88) 0%, rgba(10,10,20,0.82) 60%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E")`,
         }}
       />
 
