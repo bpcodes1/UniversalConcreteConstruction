@@ -208,7 +208,7 @@ const HeroSection = () => {
       <style>{`
         @media (max-width: 900px) {
           .hero-content {
-            padding: 120px 24px 180px !important;
+            padding: 120px 24px 220px !important;
           }
           .trust-bar {
             padding: 16px 24px !important;
@@ -217,7 +217,7 @@ const HeroSection = () => {
         }
         @media (max-width: 560px) {
           .hero-content {
-            padding: 120px 24px 240px !important;
+            padding: 120px 24px 320px !important;
           }
           .hero-content h1 {
             font-size: 54px !important;
