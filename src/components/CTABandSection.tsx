@@ -71,7 +71,7 @@ const CTABandSection = () => {
         </p>
 
         <a
-          href="tel:5039322466"
+          href="tel:5039148519"
           className="font-bebas"
           style={{
             fontSize: "clamp(48px, 6vw, 80px)",
