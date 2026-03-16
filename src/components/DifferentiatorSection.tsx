@@ -55,7 +55,7 @@ const DifferentiatorSection = () => {
         <div className="diff-grid">
           {/* Left Column */}
           <div ref={leftRef} className="reveal">
-            <div className="section-label section-label-dark">Why Salvador's</div>
+            <div className="section-label section-label-dark">Why Aaron Allen Hulst</div>
             <h2
               style={{
                 fontFamily: "'Bebas Neue', sans-serif",
@@ -92,7 +92,7 @@ const DifferentiatorSection = () => {
                 marginBottom: "32px",
               }}
             >
-              Salvador's Concrete LLC is not competing on price. We compete on
+              Aaron Allen Hulst is not competing on price. We compete on
               outcome. Concrete repairs and replacements cost two to three times
               more than a quality original installation.
             </p>

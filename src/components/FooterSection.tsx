@@ -1,7 +1,7 @@
 const FooterSection = () => {
   const navLinks = [
     { label: "Services", href: "#services" },
-    { label: "Why Salvador's", href: "#differentiator" },
+    { label: "Why Aaron Allen Hulst", href: "#differentiator" },
     { label: "Our Process", href: "#process" },
     { label: "Common Questions", href: "#objections" },
     { label: "Full FAQ", href: "#faq" },
@@ -43,8 +43,8 @@ const FooterSection = () => {
                 marginBottom: "16px",
               }}
             >
-              SALVADOR'S{" "}
-              <span style={{ color: "hsl(51,100%,50%)" }}>CONCRETE</span> LLC
+              AARON ALLEN{" "}
+              <span style={{ color: "hsl(51,100%,50%)" }}>HULST</span>
             </div>
             <p
               style={{
@@ -55,9 +55,9 @@ const FooterSection = () => {
                 marginBottom: "20px",
               }}
             >
-              Oregon's trusted concrete contractor for 15+ years. Licensed,
-              bonded, and insured on every project across the state — from
-              residential driveways in Salem to commercial slabs in Portland.
+            Oregon's trusted concrete contractor for 15+ years. Licensed,
+            bonded, and insured on every project across the state — from
+            residential driveways in Salem to commercial slabs in Portland.
             </p>
             <div
               style={{
@@ -236,7 +236,7 @@ const FooterSection = () => {
               color: "rgba(255,255,255,0.3)",
             }}
           >
-            © 2025 Salvador's Concrete LLC. All Rights Reserved. | Licensed
+            © 2025 Aaron Allen Hulst. All Rights Reserved. | Licensed
             Concrete Contractor in Oregon | CCB #222812
           </p>
           <p
