@@ -1,7 +1,7 @@
 const FooterSection = () => {
   const navLinks = [
     { label: "Services", href: "#services" },
-    { label: "Why Aaron Allen Hulst", href: "#differentiator" },
+    { label: "Why Universal Concrete & Construction", href: "#differentiator" },
     { label: "Our Process", href: "#process" },
     { label: "Common Questions", href: "#objections" },
     { label: "Full FAQ", href: "#faq" },
@@ -43,8 +43,8 @@ const FooterSection = () => {
                 marginBottom: "16px",
               }}
             >
-              AARON ALLEN{" "}
-              <span style={{ color: "hsl(51,100%,50%)" }}>HULST</span>
+              UNIVERSAL CONCRETE{" "}
+              <span style={{ color: "hsl(51,100%,50%)" }}>& CONSTRUCTION</span>
             </div>
             <p
               style={{
@@ -158,7 +158,7 @@ const FooterSection = () => {
               Contact
             </h4>
             <a
-              href="tel:5039148519"
+              href="tel:5039178444"
               style={{
                 fontFamily: "'Bebas Neue', sans-serif",
                 fontSize: "32px",
@@ -174,7 +174,7 @@ const FooterSection = () => {
                 (e.currentTarget.style.color = "hsl(51,100%,50%)")
               }
             >
-              (503) 914-8519
+              (503) 917-8444
             </a>
             <p
               style={{
@@ -236,7 +236,7 @@ const FooterSection = () => {
               color: "rgba(255,255,255,0.3)",
             }}
           >
-            © 2025 Aaron Allen Hulst. All Rights Reserved. | Licensed
+            © 2025 Universal Concrete & Construction. All Rights Reserved. | Licensed
             Concrete Contractor in Oregon | CCB #222812
           </p>
           <p

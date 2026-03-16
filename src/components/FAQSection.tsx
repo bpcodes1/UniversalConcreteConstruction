@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 const faqs = [
   {
-    q: "Is Aaron Allen Hulst licensed and insured in Oregon?",
+    q: "Is Universal Concrete & Construction licensed and insured in Oregon?",
     a: "Yes. We operate under Oregon CCB License #222812. Fully licensed, bonded, and insured on every project we accept. You can verify our license status directly at the Oregon CCB website at any time.",
   },
   {

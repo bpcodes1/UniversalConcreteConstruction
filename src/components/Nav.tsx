@@ -52,8 +52,8 @@ const Nav = () => {
             textDecoration: "none",
           }}
         >
-          AARON ALLEN{" "}
-          <span style={{ color: "hsl(51,100%,50%)" }}>HULST</span>
+          UNIVERSAL CONCRETE{" "}
+          <span style={{ color: "hsl(51,100%,50%)" }}>& CONSTRUCTION</span>
         </a>
 
         {/* Desktop Nav */}

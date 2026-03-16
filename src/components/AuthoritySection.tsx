@@ -33,7 +33,7 @@ const AuthoritySection = () => {
     },
     {
       title: "Three Things Quality Concrete Requires",
-      body: "Precision in mix design, placement, and curing. Accountability from the first call to the final walkthrough. Experience reading Oregon's climate, soil, and code requirements. Aaron Allen Hulst delivers all three — verifiably.",
+      body: "Precision in mix design, placement, and curing. Accountability from the first call to the final walkthrough. Experience reading Oregon's climate, soil, and code requirements. Universal Concrete & Construction delivers all three — verifiably.",
     },
   ];
 
@@ -94,7 +94,7 @@ const AuthoritySection = () => {
               }}
             >
               Most contractors pick up a mixer and call themselves professionals.
-              Aaron Allen Hulst has spent 15 years earning the right to
+              Universal Concrete & Construction has spent 15 years earning the right to
               say it.
             </p>
             <p

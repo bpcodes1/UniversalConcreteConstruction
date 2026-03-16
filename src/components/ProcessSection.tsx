@@ -84,7 +84,7 @@ const ProcessSection = () => {
               lineHeight: 1.6,
             }}
           >
-            Every Aaron Allen Hulst project follows the same structured
+            Every Universal Concrete & Construction project follows the same structured
             workflow — because quality outcomes don't happen by accident.
           </p>
         </div>

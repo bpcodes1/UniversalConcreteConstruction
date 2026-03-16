@@ -64,7 +64,7 @@ const ContactSection = () => {
   };
 
   const contactDetails = [
-    { icon: "📞", text: "(503) 914-8519", href: "tel:5039148519" },
+    { icon: "📞", text: "(503) 917-8444", href: "tel:5039178444" },
     { icon: "📍", text: "Salem, Oregon — Serving All of Oregon", href: null },
     { icon: "🪪", text: "CCB Licensed #222812 · Licensed · Bonded · Insured", href: null },
     { icon: "🕐", text: "Monday – Saturday", href: null },

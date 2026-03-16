@@ -55,7 +55,7 @@ const DifferentiatorSection = () => {
         <div className="diff-grid">
           {/* Left Column */}
           <div ref={leftRef} className="reveal">
-            <div className="section-label section-label-dark">Why Aaron Allen Hulst</div>
+            <div className="section-label section-label-dark">Why Universal Concrete & Construction</div>
             <h2
               style={{
                 fontFamily: "'Bebas Neue', sans-serif",
@@ -92,7 +92,7 @@ const DifferentiatorSection = () => {
                 marginBottom: "32px",
               }}
             >
-              Aaron Allen Hulst is not competing on price. We compete on
+              Universal Concrete & Construction is not competing on price. We compete on
               outcome. Concrete repairs and replacements cost two to three times
               more than a quality original installation.
             </p>
