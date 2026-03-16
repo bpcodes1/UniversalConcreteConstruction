@@ -158,7 +158,7 @@ const FooterSection = () => {
               Contact
             </h4>
             <a
-              href="tel:5039322466"
+              href="tel:5039148519"
               style={{
                 fontFamily: "'Bebas Neue', sans-serif",
                 fontSize: "32px",
@@ -174,7 +174,7 @@ const FooterSection = () => {
                 (e.currentTarget.style.color = "hsl(51,100%,50%)")
               }
             >
-              (503) 932-2466
+              (503) 914-8519
             </a>
             <p
               style={{
