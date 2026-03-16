@@ -141,7 +141,7 @@ const HeroSection = () => {
           className="hero-fade-4 hero-cta-row"
           style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}
         >
-          <a href="tel:5039322466" className="btn-primary">
+          <a href="tel:5039148519" className="btn-primary">
             <svg
               width="18"
               height="18"
