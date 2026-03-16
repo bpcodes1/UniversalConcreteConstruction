@@ -33,7 +33,7 @@ const AuthoritySection = () => {
     },
     {
       title: "Three Things Quality Concrete Requires",
-      body: "Precision in mix design, placement, and curing. Accountability from the first call to the final walkthrough. Experience reading Oregon's climate, soil, and code requirements. Salvador's Concrete LLC delivers all three — verifiably.",
+      body: "Precision in mix design, placement, and curing. Accountability from the first call to the final walkthrough. Experience reading Oregon's climate, soil, and code requirements. Aaron Allen Hulst delivers all three — verifiably.",
     },
   ];
 
