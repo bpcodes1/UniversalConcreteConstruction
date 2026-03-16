@@ -82,7 +82,7 @@ const CTABandSection = () => {
             textDecoration: "none",
           }}
         >
-          (503) 932-2466
+          (503) 914-8519
         </a>
 
         <div
